@@ -223,7 +223,7 @@ fun ButtonIconButtonRow(
             Button(
                 onClick = onLeftClick,
                 modifier = Modifier
-                    .widthIn(max = Dp.Unspecified) // just to be explicit; width capped via constraints
+                    .widthIn(max = Dp.Unspecified)
             ) {
                 Text(
                     text = leftText,
@@ -233,7 +233,7 @@ fun ButtonIconButtonRow(
                 )
             }
         }.first().measure(
-            loose.copy(maxWidth = sideMaxWidth) // clamp to left half
+            loose.copy(maxWidth = sideMaxWidth)
         )
 
         val rightPlaceable = subcompose("right") {
